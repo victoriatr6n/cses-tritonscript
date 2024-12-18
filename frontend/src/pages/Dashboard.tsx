@@ -41,7 +41,11 @@ export default function Dashboard() {
         {
           note_id: 2,
           title: "Sample Note 2 - CS",
-          content: "Here's another simulated note.",
+          content: "another simulated note.",
+        },{
+          note_id: 2,
+          title: "Sample Note 2 - Math",
+          content: "another simulated note.",
         },
       ];
       setNotes(mockNotes); 
