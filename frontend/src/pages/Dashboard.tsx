@@ -8,8 +8,15 @@ import edit from '../assets/edit.png';
 import note from '../assets/note-placeholder.png';
 import "../../src/pages/Dashboard.css";
 
+
+interface Note {
+  note_id: number;
+  title: string;
+  content: string;
+}
+
 export default function Dashboard() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState<Note[]>([]); // Explicitly type notes as an array of Note
 
   // 
   // async function fetchNotes() {
@@ -32,7 +39,7 @@ export default function Dashboard() {
   // }, []);
 
     useEffect(() => {
-      const mockNotes = [
+      const mockNotes: Note[] = [
         {
           note_id: 1,
           title: "Sample Note - Physics",
